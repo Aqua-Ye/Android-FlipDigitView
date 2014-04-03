@@ -4,4 +4,7 @@
     <!-- Animation Duration -->
     <item name="duration_point_flip_animation" type="integer">150</item>
 
+    <dimen name="digit_width">15dp</dimen>
+    <dimen name="digit_height">11dp</dimen>
+
 </resources>
