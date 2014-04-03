@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
  * 
  */
 public class Flipmeter extends LinearLayout {
-	private static final int NUM_DIGITS = 6;
+	private static final int NUM_DIGITS = 2;
 
 	private int mCurrentValue;
 	private int animationCompleteCounter = 0;
@@ -40,10 +40,6 @@ public class Flipmeter extends LinearLayout {
 
 		mDigitSpinners[0] = (FlipmeterSpinner) findViewById(R.id.widget_flipmeter_spinner_1);
 		mDigitSpinners[1] = (FlipmeterSpinner) findViewById(R.id.widget_flipmeter_spinner_10);
-		mDigitSpinners[2] = (FlipmeterSpinner) findViewById(R.id.widget_flipmeter_spinner_100);
-		mDigitSpinners[3] = (FlipmeterSpinner) findViewById(R.id.widget_flipmeter_spinner_1k);
-		mDigitSpinners[4] = (FlipmeterSpinner) findViewById(R.id.widget_flipmeter_spinner_10k);
-		mDigitSpinners[5] = (FlipmeterSpinner) findViewById(R.id.widget_flipmeter_spinner_100k);
 
 	}
 
@@ -52,7 +48,7 @@ public class Flipmeter extends LinearLayout {
 		mCurrentValue = value;
 		int tempValue = value;
 
-		for (int i = 5; i > 0; --i) {
+		for (int i = NUM_DIGITS-1; i > 0; --i) {
 			int factor = (int) Math.pow(10, i);
 
 			int digitVal = (int) Math.floor(tempValue / factor);
