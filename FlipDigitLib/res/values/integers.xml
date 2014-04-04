@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Animation Duration -->
+    <integer name="duration_point_flip_animation">100</integer>
+</resources>
